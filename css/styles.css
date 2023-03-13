@@ -306,7 +306,6 @@ button {
 }
 .sm-item-menu:not(:last-child) {
     margin-right: 56px;
-    /* calc(30px + 10 * (100vw/428)) */
 }
 .sm-box-menu {
     display: inline-flex;
@@ -704,6 +703,7 @@ button {
     position: absolute;
     top: 24px;
     right: 24px;
+    padding: 0;
     width: 24px;
     height: 24px;
 
