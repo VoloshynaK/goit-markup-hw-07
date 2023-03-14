@@ -686,7 +686,7 @@ button {
   color: var(--primary-text-color);
 }
 .sm-list {
-  display: flex;
+  display: inline-flex;
 }
 .sm-box {
   display: flex;
@@ -787,12 +787,49 @@ button {
   }
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-content {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-thumb {
+    display: flex;
+    margin-bottom: 72px;
+  }
+  .footer-content {
+    padding-left: 108px;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-thumb {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .block-logo {
   margin-right: 0;
+  margin-bottom: 72px;
 }
 @media screen and (min-width: 768px) {
   .block-logo {
     margin-right: 24px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -810,10 +847,8 @@ button {
   color: var(--accent-color);
 }
 
-.footer-content {
-  display: flex;
-}
 .footer-descr {
+  text-align: left;
   width: 264px;
   font-weight: 400;
   line-height: 1.5;
@@ -822,7 +857,18 @@ button {
 }
 
 .block-sm {
-  margin-right: 80px;
+  margin-right: 0;
+  margin-bottom: 72px;
+}
+@media screen and (min-width: 768px) {
+  .block-sm {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .block-sm {
+    margin-right: 80px;
+  }
 }
 
 .sm-content {
@@ -860,19 +906,38 @@ button {
   color: var(--primary-bckg-white-color);
 }
 .subsc-box {
-  display: flex;
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .subsc-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subsc-box {
+  }
 }
 .subsc-input {
-  outline: none;
-  margin-right: 24px;
+  margin-bottom: 16px;
   padding: 8px 16px;
-  width: 264px;
-  color: rgba(255, 255, 255, 0.6);
+  width: 100%;
 
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
   background-color: var(--primary-title-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .subsc-input {
+    width: 264px;
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
 }
 .subsc-input::placeholder {
   font-weight: 400;
@@ -885,7 +950,8 @@ button {
 .btn-subsc {
   display: flex;
   align-items: center;
-
+  margin-left: auto;
+  margin-right: auto;
   padding: 8px 24px;
 
   font-weight: 500;
